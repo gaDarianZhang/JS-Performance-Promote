@@ -24,11 +24,13 @@
   btn1.onclick = function () {
     sessionStorage.setItem('person',JSON.stringify(person))
     sessionStorage.setItem('demo','demo000001')
+    sessionStorage.name = "张三";
   }
 
   //从sessionStorage里取出数据
   btn2.onclick = function () {
     console.log(JSON.parse(sessionStorage.getItem('person')));
+    console.log(sessionStorage.name);
   }
 
   //从sessionStorage里删除数据

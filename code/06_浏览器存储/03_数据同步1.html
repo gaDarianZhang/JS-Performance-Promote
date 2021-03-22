@@ -23,9 +23,16 @@
     * */
     
     let input = document.getElementById('input')
-    input.onblur = function () {
-      localStorage.setItem('demo',input.value)
-    }
+    // input.onblur = function (evnet) {
+    //   localStorage.setItem('demo',input.value);
+    //   console.log(window.event);
+    // }
+    input.addEventListener("blur",function (event) {
+      localStorage.setItem('demo',input.value);
+      console.log(event.newValue,event.storageArea);
+      console.log(event);
+      localStorage.setItem('input',input.value);
+    })
     
 </script>
 </body>

@@ -11,7 +11,9 @@
 window.addEventListener('storage',function (event) {
   console.log(event)
   let val = document.getElementById('val')
-  val.value = event.newValue
+  val.value = event.newValue;
+  console.log(event.newValue,event.storageArea);
+  console.log(event.storageArea == localStorage);//true
 })
   
 </script>
