@@ -7,13 +7,15 @@
 <body>
 <input type="text" id="val">
 <script type="text/javascript">
-
+let val = document.getElementById('val')
 window.addEventListener('storage',function (event) {
   console.log(event)
-  let val = document.getElementById('val')
+  
   val.value = event.newValue;
-  console.log(event.newValue,event.storageArea);
-  console.log(event.storageArea == localStorage);//true
+  console.log(event.key);
+  console.log(event.url);
+  console.log(event.oldValue,event.newValue,event.storageArea);
+  console.log(event.storageArea === localStorage);//true
 })
   
 </script>

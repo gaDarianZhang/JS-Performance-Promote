@@ -31,8 +31,13 @@
       localStorage.setItem('demo',input.value);
       console.log(event.newValue,event.storageArea);
       console.log(event);
-      localStorage.setItem('input',input.value);
+      // localStorage.setItem('input',input.value);
     })
+    // window.addEventListener('storage',function (event) {
+    //   console.log(event)
+    //   console.log(event.newValue,event.storageArea);
+    //   console.log(event.storageArea == localStorage);//true
+    // })
     
 </script>
 </body>
